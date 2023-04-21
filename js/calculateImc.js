@@ -1,11 +1,12 @@
 import { modal } from "./modal.js";
-export default function imc() {
-  // CAMPOS
+import "./keyboardFeatures.js";
+export default function calculateImc() {
   const name = document.getElementById("name").value;
   const height = document.getElementById("height").value;
   const weight = document.getElementById("weight").value;
-  // MODAL
+
   modal.modalError.textContent = "Preencha todos os campos";
+
   if (name !== "" && height !== "" && weight !== "") {
     modal.modalErrorClose();
     modal.close();

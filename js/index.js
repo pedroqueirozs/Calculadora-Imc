@@ -1,9 +1,9 @@
 // IMPORTAÇÕES
 import { modal } from "./modal.js";
-import imc from "./imc.js";
-import reset from "./reset.js";
+import calculateImc from "./calculateImc.js";
+import resetFields from "./resetFields.js";
 // BOTÃO
 const calcular = document.getElementById("calcular");
 // EVENTOS
-calcular.addEventListener("click", imc);
-modal.buttonClose.addEventListener("click", reset);
+calcular.addEventListener("click", calculateImc);
+modal.buttonClose.addEventListener("click", resetFields);
