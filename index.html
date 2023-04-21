@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/index.css">
-<title>Calculadora IMC</title>
-</head>
-<body>
-<div class="container">
-    <div class="title">CALCULADORA IMC </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <script src="./js/index.js" defer type="module"></script>
 
-    <div class="input">
-        <label>Nome:</label>
-        <input type="text" id="name">
+    <title>Calculadora IMC</title>
+  </head>
+  <body>
+    <div class="modal-error">Mensagem do erro</div>
+    <div class="container">
+      <div class="title">CALCULADORA IMC</div>
+
+      <div class="inputs">
+        <label for="name">Nome</label>
+        <input type="text" id="name" />
+
+        <label for="height">Altura (cm)</label>
+        <input type="number" id="height" />
+
+        <label for="weight">Peso(kg)</label>
+        <input type="number" id="weight" />
+      </div>
+      <button id="calcular">
+        CALCULAR
+        <img src="./assets/seta.svg" alt="seta apontando para a direita" />
+      </button>
     </div>
-
-    <div class="input">
-        <label>Altura:</label>
-        <input type="number" id="height">
+    <div class="modal-wrapper">
+      <div class="modalCard">
+        <h2>Seu IMC é de 28</h2>
+        <button id="btn-modal" class="btn-modal">
+          <img src="./assets/Vector.svg" alt="Botão de fechar o modal" />
+        </button>
+      </div>
     </div>
-
-    <div class="input">
-        <label>Peso:</label>
-        <input type="number" id="weight">
-    </div>
-    <div class="buttons">
-    <button id="calcular">CALCULAR</button>
-    <button id="limpar">LIMPAR</button>
-</div>
-
-    <div class="result" id="result"></div>
-
-</div>
-
-<script src="/index.js"></script>
-
-</body>
+  </body>
 </html>
