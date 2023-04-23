@@ -1,5 +1,9 @@
 import { modal } from "./modal.js";
 import "./keyboardFeatures.js";
+const campoName = document.querySelector(".nameInput");
+const weightInput = document.querySelector(".weightInput");
+const heightInput = document.querySelector(".heightInput");
+
 export default function calculateImc() {
   const name = document.getElementById("name").value;
   const height = document.getElementById("height").value;
@@ -32,3 +36,13 @@ export default function calculateImc() {
     modal.modalErrorOpen();
   }
 }
+
+campoName.oninput = () => {
+  modal.modalErrorClose();
+};
+weightInput.oninput = () => {
+  modal.modalErrorClose();
+};
+heightInput.oninput = () => {
+  modal.modalErrorClose();
+};

@@ -1,6 +1,9 @@
-export function handleKeydow(event) {
+import calculateImc from "./calculateImc.js";
+import { modal } from "./modal.js";
+
+export function handleEscape(event) {
   if (event.key === "Escape") {
-    resetFields();
+    modal.close();
   }
 }
 export function handleEnter(event) {
@@ -8,4 +11,4 @@ export function handleEnter(event) {
     calculateImc();
   }
 }
-export default { handleEnter, handleKeydow };
+export default { handleEnter, handleEscape };

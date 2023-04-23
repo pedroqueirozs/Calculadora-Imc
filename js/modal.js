@@ -1,5 +1,5 @@
 import resetFields from "./resetFields.js";
-import { handleKeydow, handleEnter } from "./keyboardFeatures.js";
+import { handleEnter, handleEscape } from "./keyboardFeatures.js";
 export const modal = {
   wrapper: document.querySelector(".modal-wrapper"),
   buttonClose: document.querySelector(".btn-modal img"),
@@ -20,5 +20,5 @@ export const modal = {
   },
 };
 modal.buttonClose.addEventListener("click", resetFields);
-window.addEventListener("keydown", handleKeydow);
+window.addEventListener("keydown", handleEscape);
 window.addEventListener("keydown", handleEnter);
